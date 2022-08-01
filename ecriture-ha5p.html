@@ -2,13 +2,17 @@
 layout : default
 ---
 
-
-<p>En ce moment je cherche à figer l'écriture des Humains à Cinq Pieds. J'avais développé une version pour mon diplôme l'année dernière mais chaque signe sortait de manière aléatoire. Je cherche maintenant à rendre l'écriture déterministe pour qu'un même phonème en entré produise le même signe en sortie.</p><p>
-prendrait en entrée une chaîne de syllabes séparées par des tirets. Pour chaque syllabe, convertir les caractères en ASCII, les concaténer et passer le tout dans une fonction de hachage qui sort un entier de 16 chiffres.
+<p>Les courbes de Bézier sont des figures mathématiques qui m'intéressent beaucoup. C'est une typologie de forme omniprésente dans notre époque puisqu'elles assurent le dessin d'une écrasante majorité des caractères qui nous sont donnés à lire.</p>
+<p>L'écriture des Humains à Cinq Pieds n ce moment je cherche à figer l'écriture des Humains à Cinq Pieds. J'avais développé une version pour mon diplôme l'année dernière mais chaque signe sortait de manière aléatoire. Je cherche maintenant à rendre l'écriture déterministe pour qu'un même phonème en entré produise le même signe en sortie. On pourra ainsi repérer des occurrences dans l'écriture.</p><p>
+Convertir chaque groupe de caractère en ASCII, les concaténer et passer le tout dans une fonction de hachage qui sort un entier de 16 chiffres. Cet entier est découpé en 8 nombres de deux chiffes et fourni les arguments nécessaires pour tracer la courbe de Bézier cubique correspondante (x1, y1, x2, y2, x3, y3, x4, y4)
 </p>
-<p>L'algorithme fonctionne de la manière suivante :</p>
-<ul>
-    <li>
-        Pour chaque phonème
-    </li>
-</ul> ces 16 chiffres en 8 nombres</p>
+<p>Une version de l'outil est disponible à l'adresse suivante : <a href="https://clemtre.github.io/55555/">clemtre.github.io/55555</a>, il faut passer sa souris en bas à droite de l'écran et une boîte de dialogue apparaît. On peut alors écrire du texte et effectuer des réglages typographiques et afficher la transcription. Chaque mot est séparé d'un espace et chaque signe d'un tiret "-". </p>
+<p>Je n'ai pas encore d'avis tranché sur le sens d'écriture des Humains à Cinq Pieds mais il est tout à fait possible de le faire varier car les signes sont des svg groupés dans des flex-box, on peut donc l'écrire de gauche à droite, de droite à gauche, en ligne, en colonne, colonne-inversé...</p>
+
+<div class="chore-ctn">
+    {% for image in site.static_files %}
+    {% if image.path contains 'assets/img/ecriture' %}
+    <img src="{{site.url}}{{site.baseurl}}{{ image.path }}" alt="">
+    {% endif %}
+    {% endfor %}
+</div>

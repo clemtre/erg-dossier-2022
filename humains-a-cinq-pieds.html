@@ -8,7 +8,27 @@ layout: default
 <img class="ha5p-photos" src="{{site.url}}{{site.baseurl}}{{ image.path }}" alt="">
 {% endif %}
 {% endfor %}
+<div>
+    <p>
+        Les Humains à Cinq Pieds est une d'anthropo-fiction initié par mon ami Paul-Samuel Akouegnon, étudiant en scénographie avec qui j'ai fait mon diplôme en duo.
+</p><p>
 
+    Il s'agit d'un peuple qui aurait vécu il y a 500 000 ans vers l'actuelle Alaska. Les Humains à Cinq Pieds avaient comme particularité physique d'être munis de deux bras et trois jambes. Trois séries de fouilles archéologiques menées dans les années 1990 ont permis de sortir de la glace des pierres gravées de notations chorégraphiques, des totems sculptés et des ossements gravés. 
+</p><p>
+
+    Ces pièces, trop fragiles pour traverser l'Atlantique n'ont pas pu être exhibés lors de l'exposition qui s'est tenu les 16, 17 & 18 juin 2021 au 44 rue Dussoubs dans le 2ème arrondissement de la ville de Paris. Elles ont en revanche pu être photographiées et reliées dans un livre imprimé à cinq exemplaires.
+</p><p>
+    Ces photographies &mdash; à l'exception de la première pierre en haut de page &mdash; sont en fait des objets numériques modélisés par protocole via le logiciel de 3d nodale Houdini, elles questionnent la capacité d'un ordinateur à fournir des preuves formelles de l'existence d'un mythe par une production quantitative de formes.
+</p>
+
+</div>
+<div class="chore-ctn">
+    {% for image in site.static_files %}
+    {% if image.path contains 'assets/img/chore' %}
+    <img src="{{site.url}}{{site.baseurl}}{{ image.path }}" alt="">
+    {% endif %}
+    {% endfor %}
+</div>
 <div class="ha5p-ctn">
     {% for image in site.static_files %}
     {% if image.path contains 'assets/img/ha5p' %}
@@ -18,6 +38,12 @@ layout: default
 </div>
 
 <style>
+    .chore-ctn {
+        padding: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
     .ha5p-img:hover {
         max-height: 90vh;
         top: 50%;
@@ -34,7 +60,7 @@ layout: default
     }
     .ha5p-ctn {
         /* width: fit-content; */
-        gap: 10px;
+        gap: 5px;
         max-width: 100%;
         flex-wrap: wrap;
         /* flex-direction: column; */
