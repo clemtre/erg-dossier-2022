@@ -1,7 +1,8 @@
 # Site settings
 title: Dossier visuel de Martin Lemaire 
 tagline: ""
-url: "https://clemtre.github.io/" 
+url: "https://clemtre.github.io" 
+baseurl: "/erg-dossier-2022" 
 
 # Use this for production
 #sass:

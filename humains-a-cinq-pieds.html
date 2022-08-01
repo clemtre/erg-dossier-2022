@@ -12,7 +12,7 @@ layout: default
 <div class="ha5p-ctn">
     {% for image in site.static_files %}
     {% if image.path contains 'assets/img/ha5p' %}
-    <img class="ha5p-img" src="erg-dossier-2022{{ image.path }}" alt="">
+    <img class="ha5p-img" src="{{site.url}}{{site.baseurl}}{{ image.path }}" alt="">
     {% endif %}
     {% endfor %}
 </div>
