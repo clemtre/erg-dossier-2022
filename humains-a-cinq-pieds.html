@@ -5,7 +5,7 @@ layout: default
 
 {% for image in site.static_files %}
 {% if image.path contains 'assets/img/photos-ha5p' %}
-<img class="ha5p-photos" src="{{ image.path }}" alt="">
+<img class="ha5p-photos" src="{{site.url}}{{site.baseurl}}{{ image.path }}" alt="">
 {% endif %}
 {% endfor %}
 
