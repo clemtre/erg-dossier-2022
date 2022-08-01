@@ -64,11 +64,13 @@ a {
 	font-family: 'Libre Baskerville', serif;
 
 }
-
+a,p, h1 {
+	font-weight: normal;
+	padding-left: 10px;
+}
 p {
 	width: 800px;
 	max-width: 90%;
-	padding-left: 10px;
 	margin-bottom: 0;
 }
 p:not(:first-of-type){
